@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dashboardMenu"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item android:id="@+id/profileMenu"
+        android:title="Profile"
+        android:icon="@drawable/ic_email"/>
+
+    <item android:id="@+id/passwordMenu"
+        android:title="Password Change"
+        android:icon="@drawable/ic_password"/>
+
+    <item android:id="@+id/aboutMenu"
+        android:title="About"
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_home"/>
+</menu>
