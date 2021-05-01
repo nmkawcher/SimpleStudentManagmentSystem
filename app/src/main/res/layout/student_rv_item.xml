@@ -16,6 +16,7 @@
            android:layout_height="wrap_content"
            android:padding="5dp"
            android:text="Name"
+           android:textColor="@color/black"
            android:background="@drawable/et_background"
            android:id="@+id/student_name"
            />
@@ -26,6 +27,7 @@
             android:layout_weight="4"
             android:layout_height="wrap_content"
             android:padding="5dp"
+            android:textColor="@color/black"
             android:text="Email"
             android:background="@drawable/et_background"
             android:id="@+id/email"
@@ -36,7 +38,8 @@
             android:layout_weight="3"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Name"
+            android:text="roll"
+            android:textColor="@color/black"
             android:background="@drawable/et_background"
             android:id="@+id/roll"
             />

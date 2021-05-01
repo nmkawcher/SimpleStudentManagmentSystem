@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "student.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private SQLiteDatabase db;
     private Context context;
     public DBHelper(@Nullable Context context) {
@@ -41,6 +41,8 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //insert data in student table
+
+
     public long insertStudent(StudentModel model){
         db = getWritableDatabase();
         ContentValues content = new ContentValues();

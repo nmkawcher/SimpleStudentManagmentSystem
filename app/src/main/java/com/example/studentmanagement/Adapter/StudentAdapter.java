@@ -10,12 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.studentmanagement.Model.StudentModel;
-import com.example.studentmanagement.Model.UserModel;
 import com.example.studentmanagement.R;
 
 import java.util.ArrayList;
 
-public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentHolder> {
 
     private ArrayList<StudentModel>studentList;
     private Context context;
@@ -27,19 +26,19 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StudentHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view= LayoutInflater.from(context).inflate(R.layout.student_rv_item,parent,false);
 
-        return new ViewHolder(view);
+        return new StudentHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StudentHolder holder, int position) {
 
         StudentModel model=studentList.get(position);
         holder.nameTV.setText(model.getName());
-        holder.rollTV.setText(model.getRoll());
+        holder.rollTV.setText(String.valueOf(model.getRoll()));
         holder.emailTV.setText(model.getEmail());
 
 
@@ -52,9 +51,10 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class StudentHolder extends RecyclerView.ViewHolder{
+
         private TextView nameTV,emailTV,rollTV;
-        public ViewHolder(@NonNull View itemView) {
+        public StudentHolder(@NonNull View itemView) {
             super(itemView);
             nameTV=itemView.findViewById(R.id.student_name);
            emailTV=itemView.findViewById(R.id.email);
